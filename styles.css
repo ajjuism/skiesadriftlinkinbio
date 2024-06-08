@@ -1,18 +1,22 @@
+/* Default styles for normal screens */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: 'Poppins', sans-serif;
     background-image: url('https://images.unsplash.com/photo-1503198515498-d0bd9ed16902?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
+    background-size: cover; /* Fill the page */
     background-repeat: no-repeat;
     background-position: center;
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     color: #fff;
     position: relative;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #kaleidoscope {
@@ -27,13 +31,13 @@ body {
 
 .container {
     text-align: center;
-    background: rgba(6, 6, 6, 0.8);
-    padding: 20px;
+    background: rgba(6, 6, 6, 0.8); /* Adjust the background color and opacity as needed */
+    padding: 30px 20px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 90%; /* Adjust the maximum width as needed */
-    width: 100%;
-    margin: 20px auto; /* Center the container horizontally */
+    max-width: 400px;
+    width: 90%;
+    margin: 20px;
 }
 
 .header {
@@ -41,21 +45,22 @@ body {
 }
 
 .album-cover {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     margin-bottom: 20px;
+    margin-top: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 36px;
     margin-bottom: 10px;
     color: #e2e2e2;
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     color: #bbb;
     margin-bottom: 20px;
 }
@@ -105,9 +110,32 @@ p {
     color: #1da1f2;
 }
 
-/* Media Query for Small Devices */
-@media (max-width: 768px) {
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-y: auto; /* Allow vertical scrolling */
+    }
+
     .container {
-        padding: 10px;
+        padding: 20px; /* Adjust padding for smaller screens */
+        max-width: none; /* Remove max-width */
+        width: 100%; /* Set width to 100% */
+    }
+
+    .header h1 {
+        font-size: 24px; /* Adjust heading font size */
+    }
+
+    .header p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+
+    .album-cover {
+        width: 100px; /* Adjust album cover size */
+        height: 100px;
+    }
+
+    .icon {
+        font-size: 24px; /* Adjust icon size */
     }
 }
