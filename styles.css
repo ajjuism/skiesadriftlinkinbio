@@ -10,13 +10,9 @@ html, body {
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
     color: #fff;
     position: relative;
-    padding: 20px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 #kaleidoscope {
@@ -109,7 +105,7 @@ p {
     color: #1da1f2;
 }
 
-/* Media Query for Mobile Devices */
+/* Media Query for Small Devices */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
